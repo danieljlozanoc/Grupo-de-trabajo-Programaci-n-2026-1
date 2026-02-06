@@ -1,0 +1,16 @@
+import random
+
+def lanzar_dados(cantidad=2):
+    """
+    Simula el lanzamiento de uno o más dados.
+    :param cantidad: número de dados a lanzar
+    :return: lista con los resultados
+    """
+    resultados = []
+    for _ in range(cantidad):
+        dado = random.randint(1, 6)
+        resultados.append(dado)
+    return resultados
+
+# Ejemplo de uso
+print("Lanzamiento de 2 dado:", lanzar_dados())
