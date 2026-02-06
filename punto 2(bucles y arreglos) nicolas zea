@@ -1,4 +1,3 @@
-#codigo segundo punto(bucles y arreglos) nicolas zea
 import random
 nombre_j1=input("pon el nickname con el que quieras jugar=")
 num_lanzadados=(int(input("cuantas veces quieres lanzar los dados="))) 
@@ -15,8 +14,7 @@ def total_dados():
 for i in range(num_lanzadados):
     input("presiona enter(↵) para lanzar los dados")
     pri_dado, seg_dado= total_dados()
-    num_lanzamiento.append(pri_dado)
-    num_lanzamiento.append(seg_dado)
+    num_lanzamiento.append((pri_dado,seg_dado))
     
     if pri_dado == seg_dado:
        num_pares+=1
@@ -29,3 +27,7 @@ porcen_pateperros=(num_pateperro/num_lanzadados)*100
 print(f"los resultados de cada lanzamiento fueron= {num_lanzamiento}")
 print(f"las veces en que los dados fueron iguales={porcen_pares}")
 print(f"el porcentaje de las veces que sacaste pateperro fueron={porcen_pateperros}")
+
+
+
+
