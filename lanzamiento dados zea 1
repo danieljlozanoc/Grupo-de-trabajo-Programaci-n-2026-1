@@ -1,0 +1,9 @@
+#codigo lanzamientos de dados zea 1
+import random
+def total_dados():
+    pri_dado=random.randint(1,6)
+    print(f"primer dado= {pri_dado}")
+    seg_dado=random.randint(1,6)
+    print(f"segundo dado= {seg_dado}")
+    return pri_dado, seg_dado
+pri_dado, sed_dado= total_dados()
