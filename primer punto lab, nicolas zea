@@ -1,0 +1,18 @@
+#dados, mas nombre y pares, nicolas zea 
+import random
+nombre_j1=input("pon el nickname con el que quieras jugar=")
+input("presiona enter(↵) para lanzar los dados")
+def total_dados():
+    pri_dado=random.randint(1,6)
+    print(f"primer dado= {pri_dado}")
+    seg_dado=random.randint(1,6)
+    print(f"segundo dado= {seg_dado}")
+    print(f"la suma de los dados es= {pri_dado + seg_dado}")
+    return pri_dado, seg_dado
+pri_dado, seg_dado= total_dados()
+if pri_dado == seg_dado:
+    print(f"felicitaciones, {nombre_j1} puedes sacar una ficha")
+else:
+    print("mala suerte, turno del siguiente jugador")
+
+
