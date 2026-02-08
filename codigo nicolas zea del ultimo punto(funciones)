@@ -1,0 +1,20 @@
+#codigo del ultimo punto funciones nicolas zea
+import random
+
+def sum_dados():
+    valor_dados=int(input("ingrese un numero entre 2 y 12="))
+    intento=0
+    pri_dado=0
+    seg_dado=0
+    while (pri_dado + seg_dado)!=valor_dados:
+        input("presiona enter para lanzar los dados hasta que salga tu numero=")
+        pri_dado=random.randint(1,6)
+        print(f"primer dado= {pri_dado}")
+        seg_dado=random.randint(1,6)
+        print(f"segundo dado= {seg_dado}")
+        print(f"la suma de los dados es= {pri_dado + seg_dado}")
+        intento+=1
+    print(f"el numero de intentos fue= {intento}")
+    return pri_dado, seg_dado
+pri_dado,seg_dado=sum_dados()
+     
