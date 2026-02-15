@@ -1,0 +1,35 @@
+#codigo porcentajes Samantha
+import random
+name = input("Ingrese su nombre: ")
+num_lanzamientos = int(input("Ingrese el número de lanzamientos que desea realizar:"))
+
+lanzamientos = []
+presadas = 0
+pate_perro = 0
+
+
+def total_dados():
+    pri_dado=random.randint(1,6)
+    print(f"primer dado= {pri_dado}")
+    seg_dado=random.randint(1,6)
+    print(f"segundo dado= {seg_dado}")
+    return pri_dado, seg_dado
+
+for _ in range (num_lanzamientos):
+    pri_dado, seg_dado= total_dados()
+    lanzamientos.append((pri_dado,seg_dado))
+    
+    if (pri_dado ==5 and seg_dado == 6) or (pri_dado == 6 and seg_dado == 5):
+        presadas +=1
+    elif (pri_dado == 1 and seg_dado == 1) or (pri_dado == 2 and seg_dado == 1):
+        pate_perro +=1
+
+print (f'Sus lanzamientos han sido los siguientes: {lanzamientos}')
+
+#Porcentajes de presadas y pate-perros
+
+porcentaje_presadas = (presadas/num_lanzamientos)*100
+print(f'El porcentaje de presadas es de: {porcentaje_presadas}%')
+
+porcentaje_pateperro = (pate_perro/num_lanzamientos)*100
+print(f'El porcentaje de pate-perro es de: {porcentaje_pateperro}%')
