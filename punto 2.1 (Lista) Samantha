@@ -1,0 +1,19 @@
+#codigo lista Samantha
+import random
+name = input("Ingrese su nombre: ")
+num_lanzamientos = int(input("Ingrese el número de lanzamientos que desea realizar:"))
+
+lanzamientos = []
+
+def total_dados():
+    pri_dado=random.randint(1,6)
+    print(f"primer dado= {pri_dado}")
+    seg_dado=random.randint(1,6)
+    print(f"segundo dado= {seg_dado}")
+    return pri_dado, seg_dado
+
+for _ in range (num_lanzamientos):
+    pri_dado, seg_dado= total_dados()
+    lanzamientos.append((pri_dado,seg_dado))
+
+print (f'Sus lanzamientos han sido los siguientes: {lanzamientos}')
