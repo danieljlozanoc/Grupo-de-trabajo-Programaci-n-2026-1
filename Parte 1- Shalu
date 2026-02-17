@@ -1,0 +1,22 @@
+"""Codifique un programa que solicite el nombre del jugador y 
+a continuación permita el lanzamiento de los dos dados, si el jugador obtiene "presadas", 
+se debe mostrar en pantalla el mensaje "Felicitaciones {nombre} Puedes sacar una ficha", 
+de lo contrario se debe mostar el mensaje "Turno del siguiente jugador". 
+En este caso {nombre} es el nombre que fue introducido por el jugador."""
+
+import random
+nombre1= input("Ingresa tu nombre de usuario: ")
+
+def Lanzamiento_dados():
+    dado1 = random.randint(1,6)
+    dado2 = random.randint(1,6)
+
+    if dado1==dado2:
+        print(f"Felicitaciones {nombre1}, sacaste {dado1} y {dado2}. Puedes sacar una ficha")
+    else:
+        print(f"Sacaste {dado1} y {dado2}. Turno del siguiente jugador")
+    return dado1 , dado2
+
+Lanzamiento_dados()
+
+
