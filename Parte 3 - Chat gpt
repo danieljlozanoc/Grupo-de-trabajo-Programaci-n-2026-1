@@ -1,0 +1,25 @@
+import random
+
+def lanzar_hasta_objetivo(objetivo):
+    # Validar que el número esté entre 2 y 12
+    if objetivo < 2 or objetivo > 12:
+        return "El número debe estar entre 2 y 12."
+    
+    lanzamientos = 0
+    
+    while True:
+        dado1 = random.randint(1, 6)
+        dado2 = random.randint(1, 6)
+        suma = dado1 + dado2
+        
+        lanzamientos += 1
+        
+        if suma == objetivo:
+            return lanzamientos
+
+
+# Ejemplo de uso
+numero = int(input("Ingrese un número entre 2 y 12: "))
+resultado = lanzar_hasta_objetivo(numero)
+
+print("Se necesitaron", resultado, "lanzamientos para obtener", numero)
