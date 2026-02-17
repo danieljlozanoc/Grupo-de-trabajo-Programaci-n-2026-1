@@ -1,0 +1,39 @@
+import random
+
+# Solicitar datos al usuario
+nombre = input("Ingrese el nombre del jugador: ")
+num_lanzamientos = int(input("Ingrese el número de lanzamientos: "))
+
+# Lista para almacenar los lanzamientos
+lanzamientos = []
+
+# Realizar los lanzamientos
+for i in range(num_lanzamientos):
+    tiro = random.randint(1, 6)  # Simula un dado
+    lanzamientos.append(tiro)
+
+# Contadores por categoría
+presadas = 0        # 3-4
+cinco_seis = 0      # 5-6
+pate_perro = 0      # 1-2
+
+# Clasificación de lanzamientos
+for tiro in lanzamientos:
+    if tiro in [3, 4]:
+        presadas += 1
+    elif tiro in [5, 6]:
+        cinco_seis += 1
+    elif tiro in [1, 2]:
+        pate_perro += 1
+
+# Cálculo de porcentajes
+porc_presadas = (presadas / num_lanzamientos) * 100
+porc_cinco_seis = (cinco_seis / num_lanzamientos) * 100
+porc_pate_perro = (pate_perro / num_lanzamientos) * 100
+
+# Mostrar resultados
+print("\nResultados para el jugador:", nombre)
+print("Lanzamientos:", lanzamientos)
+print(f"Porcentaje de presadas (3-4): {porc_presadas:.2f}%")
+print(f"Porcentaje de 5-6: {porc_cinco_seis:.2f}%")
+print(f"Porcentaje de pate-perro (1-2): {porc_pate_perro:.2f}%")
