@@ -12,7 +12,7 @@ print("El resultado del Dado 1 es:", r[0])
 print("El resultado del Dado 2 es:", r[1])
 
 if r[0] == r[1]:
-    print(f"Felicitaciones {name} Puedes sacar una ficha")
+    print(f"Felicitaciones {name} puedes sacar una ficha")
 
 else:
     print("Turno del siguiente jugador")
