@@ -1,7 +1,7 @@
 #codigo lista Samantha
 import random
 name = input("Ingrese su nombre: ")
-num_lanzamientos = int(input("Ingrese el número de lanzamientos que desea realizar:"))
+num_lanzamientos = int(input("Ingrese el número de lanzamientos que desea realizar:" ))
 
 lanzamientos = []
 
