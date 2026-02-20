@@ -3,12 +3,16 @@ import random
 
 def sum_dados():
     valor_dados=int(input("ingrese un numero entre 2 y 12="))
+    correct_dados= valor_dados
     intento=0
     pri_dado=0
     seg_dado=0
     while (pri_dado + seg_dado)!=valor_dados:
         if valor_dados>12:
             print("cantidad no valida")
+            break
+        elif valor_dados < 2:
+            print("cantidad no valido")
             break
         input("presiona enter para lanzar los dados hasta que salga tu numero=")
         pri_dado=random.randint(1,6)
