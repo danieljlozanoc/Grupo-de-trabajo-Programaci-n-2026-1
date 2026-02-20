@@ -7,6 +7,9 @@ def sum_dados():
     pri_dado=0
     seg_dado=0
     while (pri_dado + seg_dado)!=valor_dados:
+        if valor_dados>12:
+            print("cantidad no valida")
+            break
         input("presiona enter para lanzar los dados hasta que salga tu numero=")
         pri_dado=random.randint(1,6)
         print(f"primer dado= {pri_dado}")
