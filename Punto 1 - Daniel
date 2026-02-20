@@ -1,0 +1,18 @@
+import random
+
+def lanzar_dados():
+    dado1 = random.randint(1, 6)
+    dado2 = random.randint(1, 6)
+    return dado1, dado2
+
+name = (input("Hola! Bienvenid@, ¿puedes decirme tu nombre, por favor?  "))
+
+r = lanzar_dados()
+print("El resultado del Dado 1 es:", r[0])
+print("El resultado del Dado 2 es:", r[1])
+
+if r[0] == r[1]:
+    print(f"Felicitaciones {name} Puedes sacar una ficha")
+
+else:
+    print("Turno del siguiente jugador")
