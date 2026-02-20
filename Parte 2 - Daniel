@@ -1,0 +1,29 @@
+import random
+
+def lanzar_dados():
+    dado1 = random.randint(1, 6)
+    dado2 = random.randint(1, 6)
+    return dado1, dado2
+
+name = (input("Hola! Bienvenid@, ¿puedes decirme tu nombre, por favor?  "))
+x = int(input("Dime el número de lanzamientos que deseas, por favor "))
+
+resultados = []
+
+for i in range (x):
+    resultados.append(lanzar_dados())
+
+num_presadas = 0 
+num_pp = 0
+
+for d1, d2 in resultados: 
+    if d1 == d2:
+        num_presadas+=1
+    elif d1 == 1 and d2 == 2 or d1 == 2 and d2 == 1:
+        num_pp+=1
+
+porcentaje_presadas = ((num_presadas)/len(resultados))*100
+porcentaje_pp = ((num_pp)/len(resultados))*100
+
+print("El porcentaje de presadas que obtuviste es: ", porcentaje_presadas)
+print("El porcentaje de pateperros que obtuviste es: ", porcentaje_pp)
