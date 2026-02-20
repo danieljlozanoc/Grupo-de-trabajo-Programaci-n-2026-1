@@ -1,21 +1,22 @@
 """Cree una función que reciba como argumento un número entre 2 y 12, el cual representa un valor requerido en los dos dados. La función debe realizar lanzamientos consecutivos hasta obtener una combinación en los dados correspondiente al número del argumento, posteriormente la función debe retornar la cantidad de lanzamientos que requirió para obenter el valor solicitado."""
 
+
 import random
 
 def lanzamientos_consecutivos(n):
-    cantidad_lanzamientos=[]
+    cantidad_lanzamientos=0
     result = 0
     while True :
         dado1 = random.randint(1,6)
         dado2 = random.randint(1,6)
 
         result= dado1 , dado2
-        cantidad_lanzamientos.append(result)
-        
+        cantidad_lanzamientos+=1
+    
         if dado1+dado2 == n:
             break
             
-    return dado1+dado2 , len(cantidad_lanzamientos)
+    return dado1+dado2 , cantidad_lanzamientos
 
 argumento = lanzamientos_consecutivos(random.randint(2,12))
 
