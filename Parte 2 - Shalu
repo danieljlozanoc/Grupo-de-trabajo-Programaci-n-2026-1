@@ -1,14 +1,15 @@
 """Cree un nuevo programa a partir del programa de la sección anterior que solicite al usuario el nombre del jugador y un número de lanzamientos. Posteriormente, realice el número de lanzamientos indicado por el usuario, los cuales deben ser almacenado en una lista. Modifique el programa del punto anterior para que se calcule e imprima el porcentaje de lanzamientos que se encuentran en cada una de las siguientes categorías: “presadas”, “5-6” y “pate-perro” (1-2)."""
 
 import random
+
 nombre1= input("Ingresa tu nombre de usuario: ")
 n=int(input("Ingresa el numero de lanzamientos: "))
 
 def Lanzamiento_dados():
 
-    lanzamientos=[]
-    pate_perro=[]
-    presadas=[]
+    lanzamientos= []
+    pate_perro=0
+    presadas=0
 
     for i in range(n):
         result = 0
@@ -18,12 +19,12 @@ def Lanzamiento_dados():
         lanzamientos.append(result)
 
         if dado1+dado2 ==3:
-            pate_perro.append(result) 
-        elif dado1+dado2 == 11 :
-            presadas.append(result) 
+            pate_perro+=1
+        elif dado1==dado2 :
+            presadas+=1
         
-    porcentaje_pateperro= (len(pate_perro)/n)*100
-    porcentaje_presadas= (len(presadas)/n)*100
+    porcentaje_pateperro= (pate_perro/n)*100
+    porcentaje_presadas= (presadas/n)*100
     
     return lanzamientos , porcentaje_pateperro , porcentaje_presadas
 
