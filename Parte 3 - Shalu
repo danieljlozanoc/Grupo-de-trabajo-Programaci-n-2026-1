@@ -1,4 +1,6 @@
-"""Cree una función que reciba como argumento un número entre 2 y 12, el cual representa un valor requerido en los dos dados. La función debe realizar lanzamientos consecutivos hasta obtener una combinación en los dados correspondiente al número del argumento, posteriormente la función debe retornar la cantidad de lanzamientos que requirió para obenter el valor solicitado."""
+"""Cree una función que reciba como argumento un número entre 2 y 12, el cual representa un valor requerido en los dos dados.
+La función debe realizar lanzamientos consecutivos hasta obtener una combinación en los dados correspondiente al número del argumento, 
+posteriormente la función debe retornar la cantidad de lanzamientos que requirió para obenter el valor solicitado."""
 
 
 import random
