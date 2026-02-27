@@ -18,9 +18,9 @@ for _ in range (num_lanzamientos):
     pri_dado, seg_dado= total_dados()
     lanzamientos.append((pri_dado,seg_dado))
     
-    if (pri_dado == seg_dado ) or (pri_dado == seg_dado):
+    if (pri_dado == seg_dado):
         presadas +=1
-    elif (pri_dado == 1 and seg_dado == 2) or (pri_dado == 2 and seg_dado == 1):
+    elif (pri_dado + seg_dados == 3):
         pate_perro +=1
     elif (pri_dado + seg_dado == 11):
         casi_presada += 1
