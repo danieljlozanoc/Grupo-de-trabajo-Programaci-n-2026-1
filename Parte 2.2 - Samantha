@@ -6,6 +6,7 @@ num_lanzamientos = int(input("Ingrese el número de lanzamientos que desea reali
 lanzamientos = []
 presadas = 0
 pate_perro = 0
+casi_presada = 0 
 
 
 def total_dados():
@@ -21,6 +22,9 @@ for _ in range (num_lanzamientos):
         presadas +=1
     elif (pri_dado == 1 and seg_dado == 2) or (pri_dado == 2 and seg_dado == 1):
         pate_perro +=1
+    elif (pri_dado + seg_dado == 11):
+        casi_presada += 1
+
 
 print (f'Sus lanzamientos han sido los siguientes: {lanzamientos}')
 
@@ -31,3 +35,7 @@ print(f'El porcentaje de presadas es de: {porcentaje_presadas}%')
 
 porcentaje_pateperro = (pate_perro/num_lanzamientos)*100
 print(f'El porcentaje de pate-perro es de: {porcentaje_pateperro}%')
+
+porcentaje_casi_presadas = (casi_presada/num_lanzamientos)*100
+print(f'El porcentaje de casi presadas es de: {porcentaje_casi_presadas}%')
+
