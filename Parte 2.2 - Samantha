@@ -10,9 +10,7 @@ pate_perro = 0
 
 def total_dados():
     pri_dado=random.randint(1,6)
-    print(f"primer dado= {pri_dado}")
     seg_dado=random.randint(1,6)
-    print(f"segundo dado= {seg_dado}")
     return pri_dado, seg_dado
 
 for _ in range (num_lanzamientos):
