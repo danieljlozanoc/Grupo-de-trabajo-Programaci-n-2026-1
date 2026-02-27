@@ -1,8 +1,9 @@
 #codigo del ultimo punto funciones nicolas zea
 import random
 
-def sum_dados():
-    valor_dados=int(input("ingrese un numero entre 2 y 12="))
+
+def sum_dados(valor_dados):
+    
     correct_dados= valor_dados
     intento=0
     pri_dado=0
@@ -23,5 +24,9 @@ def sum_dados():
         intento+=1
     print(f"el numero de intentos fue= {intento}")
     return pri_dado, seg_dado
-pri_dado,seg_dado=sum_dados()
+
+valor_dados=int(input("ingrese un numero entre 2 y 12="))
+
+pri_dado,seg_dado=sum_dados(valor_dados)
+     
      
